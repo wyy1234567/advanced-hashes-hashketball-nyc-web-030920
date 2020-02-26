@@ -277,7 +277,7 @@ def player_with_longest_name
   max_name
 end
 
-def long_name_steals_a_ton
+def long_name_steals_a_ton?
   max_name = player_with_longest_name
   max_steals = 0 
   max_steals_name = ""
