@@ -243,7 +243,7 @@ def winning_team
     team.each do |attribute, data|
       next unless attribute == :players 
       data.each do |title, number|
-        chPoints += data[:points]
+        chPoints += title[:points]
       end
     end
   end
