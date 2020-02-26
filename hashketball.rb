@@ -164,7 +164,11 @@ def player_numbers(team)
       
       data.each do |points|
         ans.push(data[:number])
-        
+      end
+    end
+  end
+  ans
+end
       
 
 
