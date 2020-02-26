@@ -253,11 +253,9 @@ def winning_team
     
     team.each do |attribute, data|
       next unless attribute == :players 
-      data.each do |title, number|
-        bnPoints += data[:points]
-      end
+      bnPoints += data[:points]
     end
-  end 
+  end
   
   result["Brooklyn Nets"] = bnPoints
   
