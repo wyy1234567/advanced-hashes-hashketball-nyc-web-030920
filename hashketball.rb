@@ -200,12 +200,13 @@ def big_shoe_rebounds
       next unless attribute == :players
       data.each do |info, number|
         next unless info == :shoe
-        curr = info[:rebounds]
+        curr = info[:shoe]
         if curr > max
           max = curr
+          max_rebounds = info[:rebounds]
         end
       end
     end
   end
-  max
+  max_rebounds
 end
