@@ -238,12 +238,26 @@ def winning_team
 
   
   hash.each do |place, team| 
-    if team[:team_name] == 
-
+    if team[:team_name] == 'Charlotte Hornets'
+      team.each do |attribute, data|
+        next unless attribute == :players
+        chPoints += attribute[points]
+      end
+    end
+  end
   
-  result = {"Charlotte Hornets" => chPoints, "Brooklyn Nets" => bnPoints}
+  hash.each do |place, team| 
+    if team[:team_name] == 'Brooklyn Nets'
+      team.each do |attribute, data|
+        next unless attribute == :players
+        bnPoints += attribute[points]
+      end
+    end
+  end
   
-  result.max_by { |k, v| v }.first 
+  result = {'Charlotte Hornets' => chPoints, 'Brooklyn Nets' => bnPoints}
+  
+  result.max_by { |key, value| value}.first
 
 end
 
