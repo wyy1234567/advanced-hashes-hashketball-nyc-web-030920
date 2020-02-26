@@ -213,7 +213,8 @@ end
 
 def most_points_scored
   hash = game_hash
-  max_points = 0 
+  max_points = 0
+  max_name = ""
   
   hash.each do |place, team|
     team.each do |attribute, info|
