@@ -153,13 +153,13 @@ def team_names
   array
 end
 
-def player_numbers
+def player_numbers(team)
   hash = game_hash
   ans = []
   
   hash.each do |place, team|
-    team.each do |teamInfo, data|
-      next unless teamInfo == :number
+    next unless team[:team_name] == team
+    team.each do ||
 
 
 
