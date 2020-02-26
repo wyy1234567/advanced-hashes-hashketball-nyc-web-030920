@@ -286,5 +286,13 @@ def long_name_steals_a_ton
   hash.each do |place, team|
     team[:players].each do |attribute|
       curr = attribute[:steals]
+      if curr > max_steals
+        max_steals = curr
+        max_steals_name = attribute[:player_name]
+      end
+    end
+  end
+  
+  return true if max_steals_name == max_name
 end
 
