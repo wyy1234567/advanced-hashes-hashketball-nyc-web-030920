@@ -183,7 +183,7 @@ def player_stats(playerName)
         next unless player[:player_name] == playerName
         
         ans = player.delete_if do |k, v|
-          k == :playerName
+          k == :player_name
         end
       end
     end
