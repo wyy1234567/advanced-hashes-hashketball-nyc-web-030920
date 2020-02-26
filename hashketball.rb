@@ -234,6 +234,10 @@ end
 def winning_team
   hash = game_hash
   result = {"Charlotte Hornets" => 0, "Brooklyn Nets" => 0}
+  
+  hash.each do |place, team| 
+    next unless team[:team_name]
+
 end
 
 
