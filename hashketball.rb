@@ -184,7 +184,13 @@ def player_stats(playerName)
           ans[playerName][player] == data
         end
       end
-      
+    end
+  end
+  ans.delete_if do |k, v|
+    k == playerName
+  end
+  ans
+end
     
       
 
