@@ -212,6 +212,7 @@ def big_shoe_rebounds
 end
 
 def most_points_scored
+  hash = game_hash
 end
 
 def winning_team
