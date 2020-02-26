@@ -229,10 +229,10 @@ def most_points_scored
     end
   end
   max_name
-        
 end
 
 def winning_team
+  
 end
 def player_with_longest_name
 end
