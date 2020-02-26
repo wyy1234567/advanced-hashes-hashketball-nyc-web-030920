@@ -160,7 +160,8 @@ def player_numbers(team)
   hash.each do |place, team|
     next unless team[:team_name] == team
     team.each do |teamInfo, data|
-      next unless teamInfo == :number
+      next unless teamInfo == :players
+      ans.push
       
 
 
