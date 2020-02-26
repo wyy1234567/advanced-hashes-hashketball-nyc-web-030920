@@ -143,6 +143,16 @@ def team_colors(teamName)
   end
 end
 
+def team_names
+  hash = game_hash
+  array = []
+  
+  hash.each do |place, team|
+    array.push(team[:team_names])
+  end
+  array
+end
+
 
 
 
