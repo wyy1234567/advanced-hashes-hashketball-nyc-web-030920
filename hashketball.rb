@@ -161,7 +161,9 @@ def player_numbers(team)
     next unless team[:team_name] == team
     team.each do |teamInfo, data|
       next unless teamInfo == :players
-      ans.push
+      
+      data.each do |player, points|
+        ans.push(data[:number])
       
 
 
