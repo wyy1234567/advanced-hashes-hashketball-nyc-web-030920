@@ -148,8 +148,9 @@ def team_names
   array = []
   
   hash.each do |place, team|
-    array.push(team[:team_names])
+    array << team[:team_names]
   end
+  
   array
 end
 
