@@ -213,6 +213,22 @@ end
 
 def most_points_scored
   hash = game_hash
+  max_points = 0 
+  
+  hash.each do |place, team|
+    team.each do |attribute, info|
+      next unless attribute == :players
+      info.each do |title, data|
+        curr = title[:points]
+        if curr > max_points
+          max_points = curr
+          max_name = info[:player_name]
+        end
+      end
+    end
+  end
+  max_name
+        
 end
 
 def winning_team
