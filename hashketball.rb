@@ -171,7 +171,21 @@ def player_numbers(teamName)
   ans
 end
 
-def player_stats
+def player_stats(playerName)
+  hash = game_hash
+  ans = {playerName: {}}
+  
+  hash.each do |place, team|
+    team.each do |attribute, info|
+      next unless attribute == :players
+      
+      info.each do |player, data|
+        if info[:player_name] == playerName
+          ans[playerName][player] == data
+        end
+      end
+      
+    
       
 
 
