@@ -119,7 +119,9 @@ def num_points_scored(toFind)
   end
 end
 
-def 
+def shoe_size(name)
+  hash = game_hash
+  
   
 
 
