@@ -173,13 +173,23 @@ end
 
 def player_stats(playerName)
   hash = game_hash
-  ans = {playerName: {}}
+  ans = {}
   
   hash.collect do |place, team|
     team.each do |attribute, info|
       next unless attribute == :players
       
-      info.each do |player, data|
+      info.each do |player|
+        next unless player[:player_name] == playerName
+        
+        ans = player.delete_if do |k, v|
+          k == :playerName
+        end
+      end
+    end
+  end
+  ans
+end
         
 end
     
