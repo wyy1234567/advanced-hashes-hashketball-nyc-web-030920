@@ -192,4 +192,19 @@ def player_stats(playerName)
 end
 
 def big_shoe_rebounds
-
+  max = 0 
+  hash = game_hash
+  hash.each do |place, team|
+    team.each do |attribute, data|
+      next unless attribute == :players
+      data.each do |info, number|
+        next unless info == :rebounds
+        curr = info[:rebounds]
+        if curr > max
+          max = curr
+        end
+      end
+    end
+  end
+  max
+end
