@@ -179,7 +179,7 @@ def player_stats(playerName)
     team.each do |attribute, info|
       next unless attribute == :players
       
-      info.each do |player|
+      hash[place][attribute].each do |player|
         next unless player[:player_name] == playerName
         
         ans = player.delete_if do |k, v|
