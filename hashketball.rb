@@ -222,7 +222,7 @@ def most_points_scored
         curr = title[:points]
         if curr > max_points
           max_points = curr
-          max_name = title[:player_name].to_s
+          max_name = title[:player_name]
         end
       end
     end
