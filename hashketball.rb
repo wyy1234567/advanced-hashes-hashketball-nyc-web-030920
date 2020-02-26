@@ -263,7 +263,7 @@ def winning_team
   
   result["Brooklyn Nets"] = bnPoints
   
-  result.max_by { |k, v| v }.first
+  result.max_by { |k, v| v }.first 
 
 end
 
