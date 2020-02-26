@@ -238,13 +238,7 @@ def winning_team
 
   
   hash.each do |place, team| 
-    next unless team[:team_name] == 'Charlotte Hornets'
-    
-    team.each do |attribute, data|
-      next unless attribute == :players 
-      chPoints += data[:points]
-    end
-  end
+    if team[:team_name] == 
 
   
   result = {"Charlotte Hornets" => chPoints, "Brooklyn Nets" => bnPoints}
