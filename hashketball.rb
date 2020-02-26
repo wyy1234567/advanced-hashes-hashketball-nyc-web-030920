@@ -293,6 +293,9 @@ def long_name_steals_a_ton
     end
   end
   
-  return true if max_steals_name == max_name
+  if max_steals_name == max_name
+    return true
+  end
+  return false
 end
 
