@@ -151,8 +151,15 @@ def team_names
     array.push(team[:team_name])
   end
   array
-
 end
+
+def player_numbers
+  hash = game_hash
+  ans = []
+  
+  hash.each do |place, team|
+    team.each do |teamInfo, data|
+      next unless teamInfo == :number
 
 
 
