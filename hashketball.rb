@@ -167,7 +167,7 @@ def player_numbers(teamName)
       end
     end
   end
-  ans.sort
+  ans
 end
       
 
