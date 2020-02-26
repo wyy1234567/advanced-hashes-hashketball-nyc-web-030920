@@ -239,8 +239,7 @@ def winning_team
   
   hash.each do |place, team| 
     if team[:team_name] == 'Charlotte Hornets'
-      team.each do |attribute, data|
-        next unless attribute == :players
+      team[:players].each do |attribute|
         chPoints += attribute[:points]
       end
     end
