@@ -145,13 +145,11 @@ end
 
 def team_names
   hash = game_hash
-  array = []
   
-  hash.each do |place, team|
-    array << team[:team_names]
+  hash.collect do |place, team|
+    team[:team_names]
   end
-  
-  array
+
 end
 
 
