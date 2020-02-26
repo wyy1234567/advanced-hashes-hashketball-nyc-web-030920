@@ -233,10 +233,37 @@ end
 
 def winning_team
   hash = game_hash
+  chPoints = 0 
+  bnPoints = 0 
   result = {"Charlotte Hornets" => 0, "Brooklyn Nets" => 0}
   
   hash.each do |place, team| 
-    next unless team[:team_name]
+    next unless team[:team_name] == 'Charlotte Hornets'
+    
+    team.each do |attribute, data|
+      next unless attribute == :players 
+      data.each do |title, number|
+        chPoints += data[:points]
+      end
+    end
+  end
+  
+  result["Charlotte Hornets"] = chPoints
+  
+  hash.each do |place, team| 
+    next unless team[:team_name] == 'Brooklyn Nets'
+    
+    team.each do |attribute, data|
+      next unless attribute == :players 
+      data.each do |title, number|
+        bnPoints += data[:points]
+      end
+    end
+  end 
+  
+  result["Brooklyn Nets"] = bnPoints
+  
+  result.max_by { |k, v| v }.first
 
 end
 
