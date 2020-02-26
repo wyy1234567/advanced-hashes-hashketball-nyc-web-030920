@@ -233,7 +233,7 @@ end
 
 def winning_team
   hash = game_hash
-  result = {""}
+  result = {"Charlotte Hornets": 0, ""}
 end
 
 
