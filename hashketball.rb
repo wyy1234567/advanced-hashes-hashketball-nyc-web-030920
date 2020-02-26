@@ -241,7 +241,7 @@ def winning_team
     if team[:team_name] == 'Charlotte Hornets'
       team.each do |attribute, data|
         next unless attribute == :players
-        chPoints += attribute[points]
+        chPoints += attribute[:points]
       end
     end
   end
@@ -250,7 +250,7 @@ def winning_team
     if team[:team_name] == 'Brooklyn Nets'
       team.each do |attribute, data|
         next unless attribute == :players
-        bnPoints += attribute[points]
+        bnPoints += attribute[:points]
       end
     end
   end
