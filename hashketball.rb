@@ -162,7 +162,7 @@ def player_numbers(team)
     team.each do |teamInfo, data|
       next unless teamInfo == :players
       
-      data.each do |player, points|
+      data.each do ||
         ans.push(data[:number])
       
 
