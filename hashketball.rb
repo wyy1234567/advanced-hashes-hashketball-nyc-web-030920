@@ -159,11 +159,12 @@ def player_numbers(teamName)
   
   hash.each do |place, team|
     next unless team[:team_name] == teamName
+    
     team.each do |teamInfo, data|
       next unless teamInfo == :players
       
       data.each do |points|
-        ans.push(data[:number])
+        ans.push(points[:number])
       end
     end
   end
